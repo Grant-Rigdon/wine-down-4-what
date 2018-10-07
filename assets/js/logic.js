@@ -11,6 +11,8 @@ $(document).ready(function(){
 
     var database = firebase.database();
 
+    layerJS.init();
+
     var wineList = [lightWhtie = {name:"Pinot Grigio", name:"Savingion Blac", name:"Albariño"}, sweetWhite = {name:"Moscato",name:"Riesling"}, richWhite = {name:"Chardonnay",name:"Viognier"}, sparkling = {name:"Champagne",name:"Prosecco",name:"Cava"},rose = {name:"Rose"},lightRed = {name:"Pinot Noir",name:"Grenache/Garnacha"}, mediumRed={name:"Merlot",name:"Zinfandel",name:"Tempranillo"}, boldRed = {name:"Malbec",name:"Syrah/Shiraz", name:"Cabernet Sauvignon"}]
 
     
