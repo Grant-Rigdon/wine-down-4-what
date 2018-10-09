@@ -45,10 +45,10 @@ $(document).ready(function(){
     
 
 
-
     var type = ""
     var ingedient = ""
     var foodUrl = "http://www.recipepuppy.com/api/?i="+ingredient
+
     
    
 
