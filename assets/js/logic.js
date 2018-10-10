@@ -21,7 +21,7 @@ $(document).ready(function(){
     // populate the dropdown menu
     for (i=0;i<wineList.length;i++){
         for (j=0;j<2;j++){
-            $(".w3-dropdown-content").append("<a id='"+wineList[i].cat+"' class='w3-bar-item w3-button wines' >"+wineList[i][j]+"</a>")
+            $(".w3-dropdown-content").append("<a id='"+wineList[i].cat+"' class='w3-bar-item w3-button wines' type='"+wineList[i][j]+"'>"+wineList[i][j]+"</a>")
         }        
     };
     
@@ -31,10 +31,11 @@ $(document).ready(function(){
     $(".wines").on("click",function(event){
         event.preventDefault();
         type = this.id
-        console.log(type)
-        $(".dropdown-toggle").text(this.value);
+        console.log(this.type)
+        $("#selectwine").text(this.type);
         
         $("#search").on("click",function(){
+            event.preventDefault();
             for (i=0;i<4;i++){
                 ingredient = foodList[type][i];
                 console.log(ingredient);
@@ -43,7 +44,7 @@ $(document).ready(function(){
                     dataType: 'json',
                     method: "GET"
                 }).then(function(response){
-                    $("#f"+i).attr("src",response.results[0].href)
+                    // $("#f0").attr("src",response.results[0].href)
                     console.log(response.results[0].href)
                 }) 
             }
