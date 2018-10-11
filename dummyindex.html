@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<title>Wine Down 4 What?</title>
+<title>Wine Down 4 What?HTML ONLY</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
+  body {font-family: "Times New Roman", Georgia, Serif;}
 h1,h2,h3,h4,h5,h6,a,button {
     font-family: "Playfair Display";
     letter-spacing: 5px;
@@ -16,74 +16,122 @@ h1,h2,h3,h4,h5,h6,a,button {
  }
 
 </style>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Wine Down 4 What?</a>
-    
-    <a href="#home" class="w3-bar-item w3-button">Saved Recipes</a>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a class="w3-bar-item w3-button"></a>
-      <div class="w3-dropdown-hover">
-            <button class="w3-button">Select Wine Type</button>
-            <div class="w3-dropdown-content w3-bar-block w3-border">
-              <a id= "chardonnay" href="#" class="w3-bar-item w3-button">Chardonnay</a>
-              <a id="pinotnoir" href="#" class="w3-bar-item w3-button">Pinot Noir</a>
-              <a id="merlot" href="#" class="w3-bar-item w3-button">Merlot</a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="#home" class="w3-bar-item w3-button">Wine Down 4 What?</a>
+      <a href="#about" class="w3-bar-item w3-button">Saved Recipes</a>
+
+      <!-- <a href="#home" class="w3-bar-item w3-button">Saved Recipes</a> -->
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a class="w3-bar-item w3-button"></a>
+         <!-- <div class="w3-dropdown-hover">
+          <button class="w3-button">Select Wine Type</button>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a id="chardonnay" href="#" class="w3-bar-item w3-button">Chardonnay</a>
+            <a id="pinotnoir" href="#" class="w3-bar-item w3-button">Pinot Noir</a>
+            <a id="merlot" href="#" class="w3-bar-item w3-button">Merlot</a>
+          </div>
+        </div>  -->
+        <!-- <input type="text" class="w3-bar-item w3-input w3-white w3-hide-small" placeholder="Zip Code" style="width:35%"> -->
+        <div id = "modal" class="w3-container">
+            <h2></h2>
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey w3-large">Get Started</button>
+          
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px">
+          
+                <div class="w3-center"><br>
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                  <!-- <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top"> -->
+                </div>
+          
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section">
+                    <!-- <label><b>Username</b></label> -->
+                    <div class="w3-dropdown-hover">
+                        <button id="selectwine" class="w3-button">Select Wine Type</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border">
+                          <a id="chardonnay" href="#" class="w3-bar-item w3-button">Chardonnay</a>
+                          <a id="pinotnoir" href="#" class="w3-bar-item w3-button">Pinot Noir</a>
+                          <a id="merlot" href="#" class="w3-bar-item w3-button">Merlot</a>
+                        </div>
+                      </div> 
+                      <br>
+                      <br>
+                      <br>
+                
+                    <!-- <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required> -->
+                    <!-- <label><b>Password</b></label> -->
+                    <!-- <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required> -->
+                    <Label id = "zipcode" > ZIP Code: </Label><input type="text" pattern="[0-9]{5}" title="Five digit zip code" />
+                    <button class="w3-button w3-block w3-light-grey w3-section w3-padding" type="submit">Search</button>
+                    
+                  </div>
+                </form>
+          
+                <!-- <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                  <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+                  <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+                </div> -->
+          
+              </div>
             </div>
           </div>
-          <input type="text" class="w3-bar-item w3-input w3-white w3-hide-small" placeholder="Zip Code" style="width:35%">
-          <a href="#about" class="w3-bar-item w3-button">Search</a>
-          
-    </div>
-  </div>
-</div>
+        <!-- <a href="#about" class="w3-bar-item w3-button">Saved Recipes</a> -->
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-        <img class="w3-image" src="assets/images/foodwinestockphoto.jpg" alt="Hamburger Catering" width="1600" height="800">
-    
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Recipes</h1><br>
-      <h4>Option 1</h4>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-    
-      <h4>Option 2</h4>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h4>Option 3</h4>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-    
-      <h4>Option 4</h4>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-      
-    </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="assets/images/foodwinestockphoto.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div>
     </div>
   </div>
 
-  <hr>
-  
-<!-- End page content -->
-</div>
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+    <img class="w3-image" src="assets/images/foodwinestockphoto.jpg" alt="Hamburger Catering" width="1600" height="800">
 
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-</footer>
+
+  </header>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1100px">
+
+    <hr>
+
+    <!-- Menu Section -->
+    <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h1 class="w3-center">Recipes</h1><br>
+        <h4>Option 1</h4>
+        <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+
+        <h4>Option 2</h4>
+        <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+
+        <h4>Option 3</h4>
+        <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+
+        <h4>Option 4</h4>
+        <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+
+      </div>
+
+      <div class="w3-col l6 w3-padding-large">
+        <img src="assets/images/foodwinestockphoto.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- End page content -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-light-grey w3-padding-32">
+  </footer>
 
 </body>
+
 </html>
