@@ -1,0 +1,13 @@
+body{
+    background-image: url(../images/foodwinestockphoto.jpg)
+}
+
+#inputcard{
+     margin:auto;
+     text-align: center;
+     width: 50%
+}
+
+#id01 {
+    align-content: center;
+}

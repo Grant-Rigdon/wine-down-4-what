@@ -32,7 +32,7 @@
                 <a href="#home" class="w3-bar-item w3-button">Saved Recipes</a>
                 <!-- Right-sided navbar links. Hide them on small screens -->
                 <div class="w3-right w3-hide-small">
-                    <a class="w3-bar-item w3-button"></a>
+                    <!-- <a class="w3-bar-item w3-button"></a> -->
                     <div id = "modal" class="w3-container">
                         <h2></h2>
                         <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey w3-large">Get Started</button>
@@ -45,7 +45,8 @@
                               <!-- <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top"> -->
                             </div>
              
-                            <form id="modal-form" class="w3-container" action="/action_page.php">
+                            <form id="modal-form" class="w3-container">
+                                <!--deleted from above form : action="/action_page.php" -->
                               <div class="w3-section" id="modal-section">
                                 <!-- <label><b>Username</b></label> -->
                                 <div class="w3-dropdown-hover">
@@ -61,7 +62,8 @@
                                   <br>
              
                                 <Label id = "zipcode" > ZIP Code: </Label><input type="text" pattern="[0-9]{5}" title="Five digit zip code" />
-                                <button id="search" class="w3-button w3-block w3-light-grey w3-section w3-padding" >Search</button>
+                                <!-- <button id="search" class="w3-button w3-block w3-light-grey w3-section w3-padding" >Search</button> -->
+                                <a id="searchbutton" class="w3-button">Search</a>
              
                               </div>
                             </form>
