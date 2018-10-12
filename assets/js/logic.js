@@ -94,7 +94,7 @@ $(document).ready(function(){
                 $("tbody").append("<tr><th>Label</th><th>Wine</th><th>Vintage</th><th>Price</th><th>Snooth.com Page</th></tr>");
                 for (i=0;i<4;i++){
                     console.log(response.wines[i].name);                       
-                    $("tbody").append("<tr><td><img id='tbl-img' src='"+response.wines[i].image+"'></td><td>"+response.wines[i].name+"</td><td>"+response.wines[i].vintage+"</td><td>"+response.wines[i].price+"</td><td><a href="+response.wines[i].link+">Link</a></td></tr>");
+                    $("tbody").append("<tr><td><img id='tbl-img' src='"+response.wines[i].image+"'></td><td>"+response.wines[i].name+"</td><td>"+response.wines[i].vintage+"</td><td>"+response.wines[i].price+"</td><td><a href='"+response.wines[i].link+"'>Link</a></td></tr>");
                   
                 };
             });
