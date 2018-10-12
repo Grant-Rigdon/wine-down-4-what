@@ -24,3 +24,12 @@ body{
     margin-top: 10px;
     text-align: center;
 }
+
+#tbl-img{
+    height:65px;
+    width: auto;
+}
+tbody {
+    background-color: white;
+    
+}
