@@ -26,10 +26,7 @@ body{
 }
 
 #tbl-img{
-    height:65px;
+    height:55px;
     width: auto;
 }
-tbody {
-    background-color: white;
-    
-}
+
