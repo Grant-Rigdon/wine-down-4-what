@@ -91,15 +91,15 @@ $(document).ready(function(){
             }); 
             
             $.ajax({
-                url: "http://api.snooth.com/wines/?akey="+wineKey+"&q="+wineType+"&s=sr&xp=40",
+                url: "https://api.snooth.com/wines/?akey="+wineKey+"&q="+wineType+"&s=sr&xp=40",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
                 $("tbody").empty();
-                $("tbody").append("<tr><th>Label</th><th>Wine</th><th>Vintage</th><th>Price (USD)</th><th>Snooth.com Page</th></tr>");
+                $("tbody").append("<tr><th>Wine</th><th>Vintage</th><th>Price (USD)</th></tr>");
                 for (i=0;i<4;i++){
                     console.log(response.wines[i].name);                       
-                    $("tbody").append("<tr><td><img id='tbl-img' src='"+response.wines[i].image+"'></td><td>"+response.wines[i].name+"</td><td>"+response.wines[i].vintage+"</td><td>"+response.wines[i].price+"</td><td><a href='"+response.wines[i].link+"'>"+response.wines[i].link+"</td></a></tr>");
+                    $("tbody").append("<tr><td>"+response.wines[i].name+"</td><td>"+response.wines[i].vintage+"</td><td>"+response.wines[i].price+"</td></tr>");
                   
                 };
             });
@@ -112,6 +112,7 @@ $(document).ready(function(){
         console.log(savedRecipe);
         console.log(savedWine);    
     });
+ 
   
 
         
