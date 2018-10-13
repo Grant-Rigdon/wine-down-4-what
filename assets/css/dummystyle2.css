@@ -21,22 +21,27 @@ body {
 }
 
 #searchbutton {
-    margin-left: 55px;
+    margin-left: 75px;
+    /* margin-left: 55px; */
     margin-top: 10px;
     text-align: center;
     border-color: grey;
     border-width: 1px;
     border-style: solid;
+    padding: 5px 25px 5px 25px;
 }
 
 #tbl-img {
+    margin-top: -8px;
     height: 55px;
     width: auto;
 }
 
 #selectwine {
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    padding: 5px 25px 5px 25px;
     text-align: left;
+    letter-spacing: 4px;
 
 }
 
@@ -51,4 +56,17 @@ body {
         4px 4px 0px #d5d5d5,
         7px 7px 0px rgba(0, 0, 0, 0.2);
 
+}
+
+#getstarted {
+    letter-spacing: 4px;
+}
+
+#myrecipes {
+    margin-top: 18px;
+}
+
+#save-this {
+    margin-right: 10px;
+    padding-bottom: 12px;
 }
