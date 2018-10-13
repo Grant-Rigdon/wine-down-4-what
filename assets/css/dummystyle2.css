@@ -1,7 +1,8 @@
-body{
-    background-image: url(../images/image1.jpg);
+body {
+    background-image: url(../images/image1.v2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+  
 }
 
 .w3-card-4 {
@@ -9,24 +10,45 @@ body{
     margin-top: 150px;
 }
 
-.card.text-center {
+/* .card.text-center {
     margin: auto;
     margin-top: 200px;
-}
+} */
 
 .w3-modal-content {
-  margin: auto;
-  
+    margin: auto;
+
 }
 
-#searchbutton{
-    margin-left: 85px;
+#searchbutton {
+    margin-left: 55px;
     margin-top: 10px;
     text-align: center;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
 }
 
-#tbl-img{
-    height:55px;
+#tbl-img {
+    height: 55px;
     width: auto;
 }
 
+#selectwine {
+    margin-left: 50px;
+    text-align: left;
+
+}
+
+#modal-section {
+    align-content: center;
+}
+
+#title {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow:
+        4px 4px 0px #d5d5d5,
+        7px 7px 0px rgba(0, 0, 0, 0.2);
+
+}
