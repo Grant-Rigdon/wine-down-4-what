@@ -91,7 +91,7 @@ $(document).ready(function(){
             }); 
             
             $.ajax({
-                url: "https://api.snooth.com/wines/?akey="+wineKey+"&q="+wineType+"&s=sr&xp=40",
+                url: "http://api.snooth.com/wines/?akey="+wineKey+"&q="+wineType+"&s=sr&xp=40",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -99,7 +99,7 @@ $(document).ready(function(){
                 $("tbody").append("<tr><th>Label</th><th>Wine</th><th>Vintage</th><th>Price (USD)</th><th>Snooth.com Page</th></tr>");
                 for (i=0;i<4;i++){
                     console.log(response.wines[i].name);                       
-                    $("tbody").append("<tr><td><img id='tbl-img' src='"+response.wines[i].image+"'></td><td>"+response.wines[i].name+"</td><td>"+response.wines[i].vintage+"</td><td>"+response.wines[i].price+"</td><td><a href='"+response.wines[i].link+"'>Link</a></td></tr>");
+                    $("tbody").append("<tr><td><img id='tbl-img' src='"+response.wines[i].image+"'></td><td>"+response.wines[i].name+"</td><td>"+response.wines[i].vintage+"</td><td>"+response.wines[i].price+"</td><td><a href='"+response.wines[i].link+"'>"+response.wines[i].link+"</td></a></tr>");
                   
                 };
             });
