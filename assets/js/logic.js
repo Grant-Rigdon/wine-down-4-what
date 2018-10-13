@@ -50,7 +50,7 @@ $(document).ready(function(){
             ingredient = foodList[type];
                 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id=9792bb20&_app_key=962cc18c6f5e5a0a818851759adaabf3&allowedIngredient[]="+ingredient[0],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[0],
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -60,7 +60,7 @@ $(document).ready(function(){
                 
             }); 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id=9792bb20&_app_key=962cc18c6f5e5a0a818851759adaabf3&allowedIngredient[]="+ingredient[1],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[1],
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -70,7 +70,7 @@ $(document).ready(function(){
                 
             }); 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id=9792bb20&_app_key=962cc18c6f5e5a0a818851759adaabf3&allowedIngredient[]="+ingredient[2],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[2],
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -80,7 +80,7 @@ $(document).ready(function(){
                 
             }); 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id=9792bb20&_app_key=962cc18c6f5e5a0a818851759adaabf3&allowedIngredient[]="+ingredient[3],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[3],
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -91,7 +91,7 @@ $(document).ready(function(){
             }); 
             
             $.ajax({
-                url: "https://api.snooth.com/wines/?akey=k53smv0z7gy01bnritao0gd790090xjeum6xllqjsm8bu8yd&q="+wineType+"&s=sr&xp=40",
+                url: "https://api.snooth.com/wines/?akey="+wineKey+"&q="+wineType+"&s=sr&xp=40",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
