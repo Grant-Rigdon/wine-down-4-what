@@ -1,15 +1,15 @@
 $(document).ready(function(){
     layerJS.init();
-    //     // Initialize Firebase
-    //   var config = {
-    //     apiKey: "AIzaSyAKu6rLptpGpYc9SsdP4lUx46Q6-HtpZSQ",
-    //     authDomain: "rps-game-fe6a1.firebaseapp.com",
-    //     databaseURL: "https://rps-game-fe6a1.firebaseio.com",
-    //     projectId: "rps-game-fe6a1",
-    //     storageBucket: "rps-game-fe6a1.appspot.com",
-    //     messagingSenderId: "1089353703122"
-    //   };
-    //   firebase.initializeApp(config);
+    // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAKu6rLptpGpYc9SsdP4lUx46Q6-HtpZSQ",
+        authDomain: "rps-game-fe6a1.firebaseapp.com",
+        databaseURL: "https://rps-game-fe6a1.firebaseio.com",
+        projectId: "rps-game-fe6a1",
+        storageBucket: "rps-game-fe6a1.appspot.com",
+        messagingSenderId: "1089353703122"
+      };
+      firebase.initializeApp(config);
     // create wine list
     
     var wineList = [lightWhite = {cat:0 ,0:"Pinot Grigio", 1:"Sauvignon Blanc"}, sweetWhite = {cat:1,0:"Moscato",1:"Riesling"}, richWhite = {cat:2,0:"Chardonnay",1:"Viognier"}, sparkling = {cat:3,0:"Champagne",1:"Prosecco"},rose = {cat:4,0:"Sweet Rose",1:"Dry Rose"},lightRed = {cat:5,0:"Pinot Noir",1:"Grenache/Garnacha"}, mediumRed={cat:6,0:"Merlot",1:"Zinfandel"}, boldRed = {cat:7,0:"Malbec",1:"Cabernet Sauvignon"}];
