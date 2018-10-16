@@ -50,7 +50,7 @@ $(document).ready(function(){
             ingredient = foodList[type];
                 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[0],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[0]+"&excludedCourse[]=course^course-Beverages",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -60,7 +60,7 @@ $(document).ready(function(){
                 
             }); 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[1],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[1]+"&excludedCourse[]=course^course-Beverages",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -70,7 +70,7 @@ $(document).ready(function(){
                 
             }); 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[2],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[2]+"&excludedCourse[]=course^course-Beverages",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
@@ -80,7 +80,7 @@ $(document).ready(function(){
                 
             }); 
             $.ajax({
-                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[3],
+                url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[3]+"&excludedCourse[]=course^course-Beverages",
                 dataType: 'json',
                 method: "GET"
             }).then(function(response){
