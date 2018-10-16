@@ -10,6 +10,7 @@ $(document).ready(function(){
     //     messagingSenderId: "1089353703122"
     //   };
     //   firebase.initializeApp(config);
+
     // create wine list
     
     var wineList = [lightWhite = {cat:0 ,0:"Pinot Grigio", 1:"Sauvignon Blanc"}, sweetWhite = {cat:1,0:"Moscato",1:"Riesling"}, richWhite = {cat:2,0:"Chardonnay",1:"Viognier"}, sparkling = {cat:3,0:"Champagne",1:"Prosecco"},rose = {cat:4,0:"Sweet Rose",1:"Dry Rose"},lightRed = {cat:5,0:"Pinot Noir",1:"Grenache/Garnacha"}, mediumRed={cat:6,0:"Merlot",1:"Zinfandel"}, boldRed = {cat:7,0:"Malbec",1:"Cabernet Sauvignon"}];
@@ -48,6 +49,8 @@ $(document).ready(function(){
             $("#zoomin").show()
             
             ingredient = foodList[type];
+
+            // ajax call for each recipe screen 
                 
             $.ajax({
                 url:"https://api.yummly.com/v1/api/recipes?_app_id="+foodId+"&_app_key="+foodKey+"&allowedIngredient[]="+ingredient[0]+"&excludedCourse[]=course^course-Beverages",
@@ -106,6 +109,7 @@ $(document).ready(function(){
 
         });
     });
+
     $(".recipe").on("click",function(){
         console.log("on click worked");        
         savedRecipe = $(this).attr(("data-url"));
